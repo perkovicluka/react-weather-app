@@ -1,0 +1,133 @@
+/*Apply global styles (margin, padding, font).*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, Roboto,'Segoe UI', Helvetica,Arial,sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+/*Style the body to center content and set a background image.*/
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed;
+  background-image: url(./assets/clear.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*The main container for the weather app, taking the maximum space with centered text.*/
+.weather-app {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+/*The inner container for the weather app, taking the maximum space.*/
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+/*A flexbox for high and low temperature display with centered text and a gap between elements.*/
+.high-low {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+/*A flexbox for the humidity, wind speed, and visibility with a translucent white background color.*/
+.widgets {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+  padding: 1rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+/*The 12-hour forecast table with centered content and a translucent white background color.*/
+table {
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0px 0px 15px 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/*The table caption (the table's name) with a translucent white background color.*/
+caption {
+  padding: 1rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px 15px 0px 0px;
+}
+
+/*General paragraph's have an increased font size.*/
+p {
+  font-size: 1.5rem;
+}
+
+/*Header elements have a larger font size.*/
+h1 {
+  font-size: 6rem;
+}
+
+/*Include padding for the search input container.*/
+.search {
+  padding: 1rem;
+}
+
+/*The input box with a translucent white bacgkround color and a white border.*/
+input {
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  
+}
+
+/*Make a thick outline around the search bar when hovered.*/
+input:focus, input:hover {
+  outline: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/*Set the color for the input box's placeholder text.*/
+::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+/*Apply a drop shadow to elements.*/
+.dropshadow {
+  filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.2));
+}
+
+/*Responsive styles for screens smaller than 800px (phone screens).*/
+@media screen and (max-width: 800px) {
+  /*Set the width of the 12-hour forecast table to 300px with scrolling to view cut off forecasts.*/
+  .hourly-forecast {
+    margin: 0 auto;
+    width: 300px;
+    overflow-x: auto;
+  }
+
+  /*Align the table caption to the left of the table to display properly on smaller screens.*/
+  caption {
+    text-align: left;
+  }
+
+  /*Style the flexbox of the humidity, wind speed, and visibility to a width of 300px and a gap of 1rem between elements.*/
+  .widgets {
+    width: 300px;
+    gap: 1rem;
+  }
+}
