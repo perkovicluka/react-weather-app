@@ -1,6 +1,6 @@
 ## react-weather-app
 
-[Demo]https://perkovicluka.github.io/react-weather-app/
+[Demo](https://perkovicluka.github.io/react-weather-app/)
 
 This project is for my final performance task for my ICS4U Grade 12 class.
 
