@@ -1,17 +1,5 @@
-## Running React on Replit
+## react-weather-app
 
-[React](https://reactjs.org/) is a popular JavaScript library for building user interfaces.
+This project is for my final performance task for my ICS4U Grade 12 class.
 
-[Vite](https://vitejs.dev/) is a blazing fast frontend build tool that includes features like Hot Module Reloading (HMR), optimized builds, and TypeScript support out of the box.
-
-Using the two in conjunction is one of the fastest ways to build a web app.
-
-### Getting Started
-- Hit run
-- Edit [App.jsx](#src/App.jsx) and watch it live update!
-
-By default, Replit runs the `dev` script, but you can configure it by changing the `run` field in the [configuration file](#.replit). Here are the vite docs for [serving production websites](https://vitejs.dev/guide/build.html)
-
-### Typescript
-
-Just rename any file from `.jsx` to `.tsx`. You can also try our [TypeScript Template](https://replit.com/@replit/React-TypeScript)
+This project is a weather web app. The app includes an input field for entering a city name and shows current weather data (temp, humidity, wind speed, etc.) with corresponding images/pictures/backgrounds to emphasize the data (Ex. If it is raining outside the background will turn rainy and the weather symbol will turn into a rain cloud). The api used is from [https://openweathermap.org](https://openweathermap.org/)
