@@ -42,22 +42,22 @@ function WeatherApp() {
 
   //Update the background image based on the weather condition.
   if (weatherInfo == 'Clear') {
-    document.getElementsByTagName('body')[0].style.backgroundImage = 'url(${clearImg})';
+    document.getElementsByTagName('body')[0].style.backgroundImage = `url(${clearImg})`;
   }
   else if (weatherInfo == 'Clouds') {
-    document.getElementsByTagName('body')[0].style.backgroundImage = 'url(${cloudyImg})';
+    document.getElementsByTagName('body')[0].style.backgroundImage = `url(${cloudyImg})`;
   }
   else if (weatherInfo == 'Rain') {
-    document.getElementsByTagName('body')[0].style.backgroundImage = 'url(${rainImg})';
+    document.getElementsByTagName('body')[0].style.backgroundImage = `url(${rainImg})`;
   }
   else if (weatherInfo == 'Thunderstorm') {
-    document.getElementsByTagName('body')[0].style.backgroundImage = 'url(${thunderImg})';
+    document.getElementsByTagName('body')[0].style.backgroundImage = `url(${thunderImg})`;
   }
   else if (weatherInfo == 'Snow') {
-    document.getElementsByTagName('body')[0].style.backgroundImage = 'url(${snowImg})';
+    document.getElementsByTagName('body')[0].style.backgroundImage = `url(${snowImg})`;
   }
   else if (weatherInfo == 'Mist') {
-    document.getElementsByTagName('body')[0].style.backgroundImage = 'url(${mistImg})';
+    document.getElementsByTagName('body')[0].style.backgroundImage = `url(${mistImg})`;
   }
 
   //Display a search bar and the location's 12-hour forecast table, humidity, wind speed, and visibility.
