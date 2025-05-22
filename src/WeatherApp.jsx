@@ -2,6 +2,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+import clearImg from './assets/clear.jpg';
+import cloudyImg from './assets/cloudy.jpg';
+import rainImg from './assets/rain.jpg';
+import thunderImg from './assets/thunder.jpg';
+import snowImg from './assets/snow.jpg';
+import mistImg from './assets/mist.jpg';
+
 function WeatherApp() {
   //Use state hooks to store weather data and location input.
   const [data, setData] = useState({});
@@ -35,22 +42,22 @@ function WeatherApp() {
 
   //Update the background image based on the weather condition.
   if (weatherInfo == 'Clear') {
-    document.getElementsByTagName('body')[0].style.backgroundImage = 'url(src/assets/clear.jpg)';
+    document.getElementsByTagName('body')[0].style.backgroundImage = 'url(${clearImg})';
   }
   else if (weatherInfo == 'Clouds') {
-    document.getElementsByTagName('body')[0].style.backgroundImage = 'url(src/assets/cloudy.jpg)';
+    document.getElementsByTagName('body')[0].style.backgroundImage = 'url(${cloudyImg})';
   }
   else if (weatherInfo == 'Rain') {
-    document.getElementsByTagName('body')[0].style.backgroundImage = 'url(src/assets/rain.jpg)';
+    document.getElementsByTagName('body')[0].style.backgroundImage = 'url(${rainImg})';
   }
   else if (weatherInfo == 'Thunderstorm') {
-    document.getElementsByTagName('body')[0].style.backgroundImage = 'url(src/assets/thunder.jpg)';
+    document.getElementsByTagName('body')[0].style.backgroundImage = 'url(${thunderImg})';
   }
   else if (weatherInfo == 'Snow') {
-    document.getElementsByTagName('body')[0].style.backgroundImage = 'url(src/assets/snow.jpg)';
+    document.getElementsByTagName('body')[0].style.backgroundImage = 'url(${snowImg})';
   }
   else if (weatherInfo == 'Mist') {
-    document.getElementsByTagName('body')[0].style.backgroundImage = 'url(src/assets/mist.jpg)';
+    document.getElementsByTagName('body')[0].style.backgroundImage = 'url(${mistImg})';
   }
 
   //Display a search bar and the location's 12-hour forecast table, humidity, wind speed, and visibility.
