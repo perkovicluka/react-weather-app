@@ -1,5 +1,5 @@
 //Import useState and axios.
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import clearImg from './assets/clear.jpg';
@@ -41,24 +41,21 @@ function WeatherApp() {
   const weatherInfo = (data.list ? data.list[0].weather[0].main : null);
 
   //Update the background image based on the weather condition.
-  if (weatherInfo == 'Clear') {
-    document.getElementsByTagName('body')[0].style.backgroundImage = `url(${clearImg})`;
-  }
-  else if (weatherInfo == 'Clouds') {
-    document.getElementsByTagName('body')[0].style.backgroundImage = `url(${cloudyImg})`;
-  }
-  else if (weatherInfo == 'Rain') {
-    document.getElementsByTagName('body')[0].style.backgroundImage = `url(${rainImg})`;
-  }
-  else if (weatherInfo == 'Thunderstorm') {
-    document.getElementsByTagName('body')[0].style.backgroundImage = `url(${thunderImg})`;
-  }
-  else if (weatherInfo == 'Snow') {
-    document.getElementsByTagName('body')[0].style.backgroundImage = `url(${snowImg})`;
-  }
-  else if (weatherInfo == 'Mist') {
-    document.getElementsByTagName('body')[0].style.backgroundImage = `url(${mistImg})`;
-  }
+  // Set background image reactively when weatherInfo changes
+  useEffect(() => {
+    const backgrounds = {
+      Clear: clearImg,
+      Clouds: cloudyImg,
+      Rain: rainImg,
+      Thunderstorm: thunderImg,
+      Snow: snowImg,
+      Mist: mistImg,
+    };
+    
+    if (weatherInfo && backgrounds[weatherInfo]) {
+      document.body.style.backgroundImage = `url(${backgrounds[weatherInfo]})`;
+    }
+  }, [weatherInfo]);
 
   //Display a search bar and the location's 12-hour forecast table, humidity, wind speed, and visibility.
   return (
